@@ -16,26 +16,15 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    boolean start=true;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-    DateFormat dateFormat= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    Date date = new Date();
 
-
-
+/*
+    boolean start=true;
     public void chro(View view) {
 
                 if( start==true) {
@@ -60,13 +49,15 @@ public class MainActivity extends AppCompatActivity {
         ((Chronometer) findViewById(R.id.chronometer0)).stop();
         start=true;
     }
-    public void countdown() {
-       TextView textView = (TextView) findViewById(R.id.textView2);
-        textView.setText(dateFormat.format(date));
+   public void countdown() {
+
+       TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText(R.string.essai1);
 
 
 
     }
+    */
 }
 
 
