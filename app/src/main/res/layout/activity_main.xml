@@ -26,17 +26,19 @@
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="157dp" />
+        android:layout_marginBottom="157dp"
+        android:clickable="true"
+        android:onClick="countdown"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/textView2"
-        android:layout_marginTop="67dp"
+        android:text="@string/essai"
+        android:id="@+id/textView"
         android:layout_below="@+id/chronometer0"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
 
 
 </RelativeLayout>
