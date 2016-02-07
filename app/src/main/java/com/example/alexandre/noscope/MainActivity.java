@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void startchro(View view) {
+   public void startchro(View view) {
         ((Chronometer) findViewById(R.id.chronometer0)).start();
         start=false;
     }
@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         ((Chronometer) findViewById(R.id.chronometer0)).stop();
         start=true;
     }
-   public void countdown() {
+    */
+   public void countdown(View view) {
 
        TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(R.string.essai1);
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    */
 }
 
 
