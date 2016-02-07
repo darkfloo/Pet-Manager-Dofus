@@ -5,12 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
+import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.NumberPicker.OnValueChangeListener;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+
+import java.sql.Time;
 import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -50,13 +57,24 @@ public class MainActivity extends AppCompatActivity {
         start=true;
     }
     */
-   public void countdown(View view) {
+    NumberPicker numberPicker;
+
+    public void setNumberPicker(NumberPicker numberPicker) {
+        this.numberPicker = numberPicker;
+    }
+
+    public String getDate(int a){
+        Calendar c=Calendar.getInstance();
+        c.add(Calendar.HOUR, a);
+        DateFormat outputFormat = new SimpleDateFormat("MM/yyyy/dd HH:mm:ss");
+        return outputFormat.format(c.getTime());
+    }
+
+
+    public void countdown(View view) {
 
        TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText(R.string.essai1);
-
-
-
+        textView.setText(getDate(R.id.numberPicker));
     }
 }
 
